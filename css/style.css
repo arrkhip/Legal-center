@@ -13,8 +13,8 @@ html {
 }
 
 body {
-  font: 400 1.6rem/1 "Fira Sans", sans-serif;
-  color: #252525;
+  font: 400 1.6rem/1 "Lato", sans-serif;
+  color: #191919;
   background-color: #ffffff;
   overflow-x: hidden;
   min-width: 320px;
@@ -50,6 +50,8 @@ p {
 
 a {
   text-decoration: none;
+  color: #c13e21;
+  border-bottom: 1px solid #c13e21;
 }
 
 a:focus,
@@ -77,7 +79,7 @@ img {
 }
 
 .input:focus {
-  border-bottom-color: #ffb700;
+  border-bottom-color: #c13e21;
 }
 
 .input + .input {
@@ -87,25 +89,25 @@ img {
 .input::-webkit-input-placeholder {
   font-size: 1.2rem;
   font-weight: 200;
-  color: #252525;
+  color: #191919;
 }
 
 .input:-moz-placeholder {
   font-size: 1.2rem;
   font-weight: 200;
-  color: #252525;
+  color: #191919;
 }
 
 .input::-moz-placeholder {
   font-size: 1.2rem;
   font-weight: 200;
-  color: #252525;
+  color: #191919;
 }
 
 .input:-ms-input-placeholder {
   font-size: 1.2rem;
   font-weight: 200;
-  color: #252525;
+  color: #191919;
 }
 
 textarea {
@@ -218,8 +220,4 @@ textarea:focus:-ms-input-placeholder {
   .grid {
     max-width: 100%;
   }
-}
-
-.header {
-  background: red;
 }
