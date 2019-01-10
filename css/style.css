@@ -220,6 +220,11 @@ textarea:focus:-ms-input-placeholder {
   }
 }
 
+/*
+ * ========================
+ * PROMO
+ * ========================
+ */
 .promo {
   padding: 0 12px;
 }
