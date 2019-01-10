@@ -1,0 +1,131 @@
+/*
+ * ========================
+ * BASE 
+ * ========================
+ */
+
+html,
+body 
+  height: 100%
+
+html 
+	font-size: 10px
+
+body 
+  font: 400 1.6rem/1 $font-main
+  color: $grey--dark
+  background-color: $white
+  overflow-x: hidden
+  min-width: 320px
+
+* 
+  box-sizing: border-box
+  vertical-align: top 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 
+  margin: 0
+
+ul 
+  padding: 0
+  margin: 0
+
+li 
+  list-style: none
+
+p 
+  margin: 0
+
+a 
+  text-decoration: none
+
+a:focus,
+button:focus,
+img:focus 
+  outline: none
+
+img 
+  max-width: 100%
+  height: auto 
+
+.input 
+  display: block
+  width: 100%
+  max-width: 300px
+  height: 25px
+  margin: auto
+  border: none
+  border-bottom: 1px solid rgba(41, 41, 40, 0.1)
+  line-height: 2.5rem
+  text-align: center
+  background-color: rgba(41, 41, 40, 0.03)
+
+  &:focus 
+    border-bottom-color: $yellow
+  
+  &+& 
+    margin-top: 20px
+  
+  @include input-placeholder 
+    font-size: 1.2rem
+    font-weight: 200
+    color: lighten($grey--dark, .1)
+  
+textarea 
+  width: 100%
+  height: 200px
+  padding: 20px
+  border: 1px solid rgba(0, 0, 0, 0.1)
+
+  @include input-placeholder 
+  	color:  rgba(65, 61, 75, 0.5)
+  
+
+
+input:focus, 
+textarea:focus 
+  outline: none 
+
+input[type="text"]:focus::-webkit-input-placeholder  
+	color: transparent 
+input[type="text"]:focus::-moz-placeholder           
+	color: transparent 
+input[type="text"]:focus:-moz-placeholder            
+	color: transparent 
+input[type="text"]:focus:-ms-input-placeholder       
+	color: transparent 
+
+input[type="email"]:focus::-webkit-input-placeholder  
+	color: transparent 
+input[type="email"]:focus::-moz-placeholder           
+	color: transparent 
+input[type="email"]:focus:-moz-placeholder            
+	color: transparent 
+input[type="email"]:focus:-ms-input-placeholder       
+	color: transparent 
+
+textarea:focus::-webkit-input-placeholder            
+	color: transparent 
+textarea:focus::-moz-placeholder                     
+	color: transparent 
+textarea:focus:-moz-placeholder                      
+	color: transparent 
+textarea:focus:-ms-input-placeholder                 
+	color: transparent 
+
+.scroll-hidden 
+  overflow: hidden
+  padding-right: 17px
+
+
+
+
+
+
+
+
+
