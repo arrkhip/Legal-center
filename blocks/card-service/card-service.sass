@@ -1,0 +1,41 @@
+.card-service 
+	position: relative
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	width: 100%
+	max-width: 370px
+	height: 250px
+	padding: 20px
+	overflow: hidden
+
+	&:hover 
+		.card-service__title 
+			align-self: flex-start
+
+		.card-service__link
+			transform: translateY(0)
+			opacity: 1
+
+	&--family
+		background-color: #f3f0e8
+
+	&__title
+		align-self: flex-end
+		font-size: 24px
+		font-weight: 300
+		line-height: 30px
+		letter-spacing: .24px
+		@include trs
+	
+	&__banner
+	
+	&__link
+		position: absolute
+		bottom: 20px
+		left: 20px
+		font-size: 18px
+		font-weight: 300
+		transform: translateY(40px)
+		opacity: 0
+		@include trs
