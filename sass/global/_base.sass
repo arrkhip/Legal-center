@@ -39,9 +39,25 @@ p
   line-height: 24px
 
 a 
+  position: relative
+  display: inline-block
+  padding-bottom: 2px
   text-decoration: none
+  overflow: hidden
   color: $tomato
-  border-bottom: 1px solid $tomato
+
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 1px
+    background-color: $tomato
+    @include trs
+
+  &:hover::after
+    transform: translateX(100%)
 
 a:focus,
 button:focus,
@@ -120,6 +136,15 @@ textarea:focus:-ms-input-placeholder
 .scroll-hidden 
   overflow: hidden
   padding-right: 17px
+
+.headline 
+  font: 700 30px/1 $font-second
+  text-align: center
+  color: $grey--dark
+
+  
+
+
 
 
 
