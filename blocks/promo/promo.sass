@@ -1,0 +1,103 @@
+.promo
+	padding: 0 12px
+	
+	&__slider
+
+		&-dots 
+			position: absolute
+			bottom: 30px
+			right: 30px
+
+			li 
+				display: inline-block
+
+				&:hover:not(.slick-active) button 
+					cursor: pointer
+					opacity: .5
+				
+				&:not(:last-child) 
+					margin-right: 9px
+				
+				&.slick-active button 
+					background-color: #c35941
+
+				button 
+					width: 11px
+					height: 11px
+					padding: 0
+					border: none
+					border-radius: 50%
+					background-color: #cbcbcb
+					overflow: hidden
+					text-indent: 999px
+					@include trs
+
+	&__slide
+		position: relative
+		height: 575px
+		background-color: #0d0d0d
+		outline: none
+
+		&::before 
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			width: 100%
+			height: 100%
+			background-position: right 40px center
+			background-repeat: no-repeat
+
+		&--first::before
+			background-image: url('../img/promo-bg-1.png')
+
+		&--second::before
+			background-image: url('../img/promo-bg-1.png')
+			
+			/*отражение картинки по горизонтали для презентации*/
+			background-position: left 40px center
+			transform: scale(-1, 1)
+
+		.grid
+			display: flex
+			align-items: center
+			height: 100%
+
+	&__info
+		max-width: 485px
+	
+		&-title
+			margin-bottom: 30px
+			font: 700 38px/1 $font-second
+			letter-spacing: .38px
+			color: $white
+		
+		&-descr
+			margin-bottom: 45px
+			font-size: 18px
+			font-weight: 300
+			line-height: 28px
+			color: #cbcbcb
+
+	@include width-lg
+
+		&__slide
+
+			&::before
+				opacity: .4
+
+	@include width-xs
+
+		&__slider
+
+			&-dots
+				right: 50%
+				transform: translateX(50%)
+
+		&__slide
+			height: 500px
+
+		&__info
+			text-align: center
+
+
