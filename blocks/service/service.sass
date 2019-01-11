@@ -1,3 +1,8 @@
+/*
+ * ========================
+ * SERVICE 
+ * ========================
+ */
 .service 
 	padding: 70px 0
 
@@ -6,3 +11,48 @@
 
 	&__slider 
 		padding-top: 60px
+
+		&-arrow
+			position: absolute
+			top: -28px
+			width: 52px
+			height: 52px
+			padding: 0
+			border: none
+			background: $grey url('../img/icons/i-arrow.png') no-repeat center;
+			@include trs 
+
+			&:hover 
+				cursor: pointer
+				background-color: $tomato
+
+			&--prev
+				right: 60px
+				transform: rotate(180deg)
+			
+			&--next
+				right: 0
+
+	@include width-lg 
+
+		&__slider
+			margin: 0 -5px
+
+		&__slide
+			margin: 0 5px
+
+	@include width-sm
+
+		&__slider 
+			padding-top: 100px
+
+			&-arrow
+				top: 15px
+
+				&--prev
+					right: auto
+					left: 0
+
+				&--next
+					right: auto
+					left: 60px

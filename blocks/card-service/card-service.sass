@@ -1,3 +1,8 @@
+/*
+ * ========================
+ * CARD-SERVICE 
+ * ========================
+ */
 .card-service 
 	position: relative
 	display: flex
@@ -11,7 +16,7 @@
 
 	&:hover 
 		.card-service__title 
-			align-self: flex-start
+			transform: translateY(-125px)
 
 		.card-service__link
 			transform: translateY(0)
@@ -20,6 +25,12 @@
 	&--family
 		background-color: #f3f0e8
 
+	&--consumer
+		background-color: #e8f3ec
+
+	&--build 
+		background-color: #e8edf3
+
 	&__title
 		align-self: flex-end
 		font-size: 24px
@@ -27,6 +38,8 @@
 		line-height: 30px
 		letter-spacing: .24px
 		@include trs
+
+		min-height: 85px
 	
 	&__banner
 	
@@ -39,3 +52,15 @@
 		transform: translateY(40px)
 		opacity: 0
 		@include trs
+
+
+	@include width-lg 
+
+		&__title 
+			font-size: 17px
+			line-height: 22px
+
+
+	@include width-sm
+		margin: auto
+
