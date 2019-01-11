@@ -1,0 +1,128 @@
+/*
+ * ========================
+ * CONTACTS 
+ * ========================
+ */
+.contacts 
+	padding-top: 50px
+	padding-bottom: 60px
+
+	&__grid
+		display: flex
+		justify-content: space-between
+
+	&__recall
+		width: calc(50% - 15px)
+		margin-right: 30px
+
+		&-slider
+			height: 500px
+			background-color: $black
+
+			&-dots 
+				position: absolute
+				bottom: 30px
+				left: 50%
+				transform: translateX(-50%)
+
+				li 
+					display: inline-block
+
+					&:hover:not(.slick-active) button 
+						cursor: pointer
+						opacity: .5
+					
+					&:not(:last-child) 
+						margin-right: 9px
+					
+					&.slick-active button 
+						padding: 5px
+						margin-top: -2px
+						background-color: #c35941
+
+					button 
+						width: 6px
+						height: 6px
+						padding: 0
+						border: none
+						border-radius: 50%
+						background-color: $white
+						overflow: hidden
+						text-indent: 999px
+						@include trs
+
+		&-slide
+			outline: none
+			padding: 74px 25px
+	
+		&-text
+			min-height: 300px
+			margin-bottom: 10px
+			font: 300 20px/30px $font-main
+			text-align: center
+			color: $white
+	
+		&-author
+			font-size: 12px
+			font-weight: 300
+			text-transform: uppercase
+			text-align: center
+			color: $white
+
+	&__map
+		position: relative
+		width: calc(50% - 15px)
+		height: 500px
+
+		&-btn
+			position: absolute
+			left: 25px
+			bottom: 30px
+			background-color: black
+			color: $white
+			text-transform: uppercase
+
+			&:hover span
+				color: $white
+
+			&::before
+				background-color: $tomato
+
+
+	@include width-lg
+
+		&__recall
+
+			&-text
+				font-size: 18px
+				line-height: 26px
+
+
+	@include width-md
+
+		&__grid
+			flex-direction: column
+
+		&__recall,
+		&__map
+			width: 100%
+			margin-right: 0
+
+		&__recall 
+			margin-bottom: 50px
+
+			&-slider
+				height: auto
+
+			&-text 
+				min-height: auto
+				max-width: 500px
+				margin: auto
+				margin-bottom: 30px
+				font-size: 14px
+				line-height: 20px
+
+		&__map
+			height: 300px
+
+
