@@ -86,75 +86,89 @@ img {
 }
 
 .input {
-  display: block;
-  width: 100%;
-  max-width: 300px;
-  height: 25px;
-  margin: auto;
+  display: inline-block;
+  height: 48px;
+  padding-left: 20px;
   border: none;
-  border-bottom: 1px solid rgba(41, 41, 40, 0.1);
-  line-height: 2.5rem;
-  text-align: center;
-  background-color: rgba(41, 41, 40, 0.03);
+  border-bottom: 1px solid transparent;
+  font: 400 16px/48px "Lato", sans-serif;
+  color: #787878;
+  background-color: #ffffff;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
 .input:focus {
   border-bottom-color: #c13e21;
 }
 
-.input + .input {
-  margin-top: 20px;
-}
-
 .input::-webkit-input-placeholder {
-  font-size: 1.2rem;
-  font-weight: 200;
-  color: #191919;
+  font: 300 15px/48px "Lato", sans-serif;
+  color: #787878;
 }
 
 .input:-moz-placeholder {
-  font-size: 1.2rem;
-  font-weight: 200;
-  color: #191919;
+  font: 300 15px/48px "Lato", sans-serif;
+  color: #787878;
 }
 
 .input::-moz-placeholder {
-  font-size: 1.2rem;
-  font-weight: 200;
-  color: #191919;
+  font: 300 15px/48px "Lato", sans-serif;
+  color: #787878;
 }
 
 .input:-ms-input-placeholder {
-  font-size: 1.2rem;
-  font-weight: 200;
-  color: #191919;
+  font: 300 15px/48px "Lato", sans-serif;
+  color: #787878;
 }
 
-textarea {
+.textarea {
   width: 100%;
   height: 200px;
   padding: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
-textarea::-webkit-input-placeholder {
-  color: rgba(65, 61, 75, 0.5);
+.textarea:focus {
+  border-bottom-color: #c13e21;
 }
 
-textarea:-moz-placeholder {
-  color: rgba(65, 61, 75, 0.5);
+.textarea::-webkit-input-placeholder {
+  font: 300 15px/1.6em "Lato", sans-serif;
+  font-color: #787878;
 }
 
-textarea::-moz-placeholder {
-  color: rgba(65, 61, 75, 0.5);
+.textarea:-moz-placeholder {
+  font: 300 15px/1.6em "Lato", sans-serif;
+  font-color: #787878;
 }
 
-textarea:-ms-input-placeholder {
-  color: rgba(65, 61, 75, 0.5);
+.textarea::-moz-placeholder {
+  font: 300 15px/1.6em "Lato", sans-serif;
+  font-color: #787878;
+}
+
+.textarea:-ms-input-placeholder {
+  font: 300 15px/1.6em "Lato", sans-serif;
+  font-color: #787878;
+}
+
+.select {
+  height: 48px;
+  padding-left: 20px;
+  border: none;
+  font: 300 15px/48px "Lato", sans-serif;
+  color: #787878;
+  background-color: #ffffff;
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: none;
 }
 
@@ -402,6 +416,10 @@ textarea:focus:-ms-input-placeholder {
   -webkit-transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
   transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.btn:hover {
+  cursor: pointer;
 }
 
 .btn:active {
@@ -733,4 +751,51 @@ textarea:focus:-ms-input-placeholder {
     right: auto;
     left: 60px;
   }
+}
+
+/*
+ * ========================
+ * BID
+ * ========================
+ */
+.bid {
+  padding: 100px 0;
+  background-color: #f5f5f5;
+}
+
+.bid__descr {
+  max-width: 370px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 45px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.bid__form {
+  max-width: 670px;
+  margin: auto;
+}
+
+.bid__input {
+  width: calc(50% - 15px);
+  margin-bottom: 30px;
+}
+
+.bid__input:first-of-type {
+  margin-right: 26px;
+}
+
+.bid__select {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.bid__textarea {
+  height: 170px;
+  margin-bottom: 30px;
+}
+
+.bid__box {
+  text-align: center;
 }
