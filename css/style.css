@@ -799,3 +799,9 @@ textarea:focus:-ms-input-placeholder {
 .bid__box {
   text-align: center;
 }
+
+@media (max-width: 540px) {
+  .bid {
+    padding: 50px 0;
+  }
+}
