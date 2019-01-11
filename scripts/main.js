@@ -1,3 +1,11 @@
+// mobile menu
+$('.js-header__switch').click(function() {
+	$('.header__switch').toggleClass('header__switch--open');
+	$('.header__list').toggleClass('header__list--open');
+	$('body').toggleClass('scroll-hidden');
+});
+
+
 // promo slider
 $('.js-promo__slider').slick({
   infinite: true,

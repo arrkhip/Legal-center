@@ -1186,3 +1186,275 @@ textarea:focus:-ms-input-placeholder {
     margin: 30px 0;
   }
 }
+
+/*
+ * ========================
+ * HEADER
+ * ========================
+ */
+.header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.header__logo {
+  padding-bottom: 0;
+}
+
+.header__logo::after {
+  display: none;
+}
+
+.header__switch {
+  display: none;
+}
+
+.header__list {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  width: calc(100% - 260px);
+  margin-left: auto;
+}
+
+.header__nav {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: auto;
+}
+
+.header__nav-item {
+  color: #0d0d0d;
+  font-size: 18px;
+  line-height: 24px;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.header__nav-item::after {
+  display: none;
+}
+
+.header__nav-item:hover {
+  color: #c13e21;
+}
+
+.header__nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.header__contacts {
+  text-align: right;
+}
+
+.header__contacts-tel {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0d0d0d;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.header__contacts-tel:hover {
+  opacity: .6;
+}
+
+.header__contacts-tel:after {
+  display: none;
+}
+
+.header__contacts-tel span {
+  vertical-align: bottom;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+@media (max-width: 992px) {
+  .header {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .header__logo img {
+    height: 60px;
+  }
+
+  .header__list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 10;
+    color: #ffffff;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
+
+  .header__list--open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .header__nav {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .header__nav-item {
+    color: #ffffff;
+  }
+
+  .header__nav-item:not(:last-child) {
+    margin-right: 0;
+    padding-bottom: 15px;
+  }
+
+  .header__contacts {
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  .header__contacts-tel {
+    color: #ffffff;
+  }
+
+  .header__switch {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 11;
+  }
+
+  .header__switch span {
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    background: #c13e21;
+  }
+
+  .header__switch span::before, .header__switch span::after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    background-color: #c13e21;
+    -webkit-transition-duration: 0.3s, 0.3s;
+    -o-transition-duration: 0.3s, 0.3s;
+    transition-duration: 0.3s, 0.3s;
+  }
+
+  .header__switch span::before {
+    top: -8px;
+    -webkit-transition-property: top, -webkit-transform;
+    transition-property: top, -webkit-transform;
+    -o-transition-property: top, transform;
+    transition-property: top, transform;
+    transition-property: top, transform, -webkit-transform;
+  }
+
+  .header__switch span::after {
+    bottom: -8px;
+    -webkit-transition-property: bottom, -webkit-transform;
+    transition-property: bottom, -webkit-transform;
+    -o-transition-property: bottom, transform;
+    transition-property: bottom, transform;
+    transition-property: bottom, transform, -webkit-transform;
+  }
+
+  .header__switch--open span {
+    background: none;
+  }
+
+  .header__switch--open span::before, .header__switch--open span::after {
+    -webkit-transition-delay: 0s, 0.3s;
+    -o-transition-delay: 0s, 0.3s;
+    transition-delay: 0s, 0.3s;
+    background-color: #ffffff;
+  }
+
+  .header__switch--open span::before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .header__switch--open span::after {
+    bottom: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
