@@ -966,3 +966,64 @@ textarea:focus:-ms-input-placeholder {
     height: 300px;
   }
 }
+
+/*
+ * ========================
+ * CASE
+ * ========================
+ */
+.case {
+  padding-bottom: 115px;
+}
+
+.case .headline {
+  text-align: left;
+}
+
+.case__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+
+.case__card {
+  max-width: 320px;
+  margin-top: 50px;
+}
+
+.case__card-title {
+  margin-bottom: 50px;
+  font: 300 20px/30px "Lato", sans-serif;
+  color: #191919;
+  text-transform: uppercase;
+}
+
+.case__card-link {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+@media (max-width: 992px) {
+  .case__card-title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 540px) {
+  .case {
+    padding-bottom: 60px;
+  }
+}
