@@ -1,0 +1,134 @@
+/*
+ * ========================
+ * SINGLE PAGE
+ * ========================
+ */
+
+.single 
+	position: relative
+	padding: 40px 0
+
+	.grid
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-start
+
+		.headline
+			text-align: left
+
+	&__info,
+	&__praxis
+		width: calc(50% - 15px)
+
+	&__info
+		margin-right: 30px
+
+		&>p
+			margin-top: 30px
+			font-weight: 300
+			color: #787878
+
+		&-plus
+			margin-top: 55px
+
+			p
+				color: #171717
+
+				&:not(:first-child)
+					margin-top: 10px
+
+			span
+				display: inline-block
+				padding-left: 5px
+				color: #787878
+				font-weight: 300
+
+	&__praxis
+		padding: 35px 
+		background-color: #e6e6e6
+
+		.headline 
+			margin-bottom: 50px
+
+	&__nav
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		margin-top: 45px
+
+		&-icon
+			width: 6px
+			height: 9px
+			margin-right: 15px
+			overflow: hidden
+
+		&-title
+
+		&-item 
+			display: inline-flex
+			align-items: center
+			color: #828282
+			font-weight: 300
+			line-height: 18px
+			@include trs
+
+			&:hover
+				opacity: .6
+
+			&::after
+				display: none
+
+			&--prev
+
+				.single__nav-icon
+						transform: rotate(90deg)
+
+			&--all
+				margin: 0 auto
+
+				.single__nav-icon
+					width: 16px
+					height: 16px
+
+			&--next
+				text-align: right
+
+				.single__nav-icon
+					margin-right: 0
+					margin-left: 15px
+					transform: rotate(-90deg)
+
+
+	@include width-md
+
+		&__grid 
+			flex-direction: column
+		
+		&__info,
+		&__praxis
+			width: 100%
+
+		&__info
+			margin-right: 0
+			margin-bottom: 50px
+
+
+	@include width-sm
+		&__nav-item 
+			font-size: 14px
+
+	@include width-xs
+		&__nav
+			flex-direction: column
+
+			&-item
+				text-align: center
+
+				&:not(:last-child) 
+					margin-bottom: 15px
+
+				&--all
+					order: -1
+
+

@@ -1,0 +1,45 @@
+.accordion 
+
+	&__item
+		&:not(:last-child)
+			margin-bottom: 20px
+
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		@include trs
+
+		&:hover
+			opacity: .6
+
+	&__title
+		width: calc(100% - 30px)
+		font-weight: 700
+		line-height: 1.2em
+		color: $black
+
+		&:hover
+			cursor: pointer		
+
+	&__icon
+		width: 22px
+		margin-top: 5px
+		@include trs
+
+		&:hover
+			cursor: pointer
+
+		&--open
+			transform: rotate(180deg)
+
+	&__body
+		display: none
+		padding-top: 35px
+		padding-bottom: 20px
+		line-height: 24px
+		font-weight: 300
+		color: #828282
+
+
+

@@ -52,3 +52,14 @@ $('.js-recall__slider').slick({
   arrows: false,
   dotsClass: 'contacts__recall-slider-dots'
 });
+
+
+// accordion
+$(function() {
+    var caption = $('.js-accordion__header'),
+        content = $('.accordion__body');         
+    caption.click(function(e) {
+        $(this).next(content).slideToggle(600);
+        $(this).find('.accordion__icon').toggleClass('accordion__icon--open');
+    });
+});
