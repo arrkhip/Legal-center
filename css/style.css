@@ -1692,8 +1692,17 @@ textarea:focus:-ms-input-placeholder {
   }
 }
 
+/*
+ * ========================
+ * ACCORDION
+ * ========================
+ */
 .accordion__item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.accordion__item:first-child .accordion__body {
+  display: block;
 }
 
 .accordion__header {

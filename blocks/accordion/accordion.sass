@@ -1,8 +1,16 @@
+/*
+ * ========================
+ * ACCORDION 
+ * ========================
+ */
 .accordion 
 
 	&__item
 		&:not(:last-child)
 			margin-bottom: 20px
+
+		&:first-child .accordion__body
+			display: block
 
 	&__header
 		display: flex
