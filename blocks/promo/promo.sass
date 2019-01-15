@@ -93,6 +93,7 @@
 
 
 	@include width-xs
+		padding: 0
 
 		&__slider
 
@@ -105,5 +106,16 @@
 
 		&__info
 			text-align: center
+
+			&-title
+				font-size: 30px
+				line-height: 1.2em
+
+
+	@media (min-width: 992px)
+
+		&__slide .grid
+			max-width: 100%
+			padding-left: 268px
 
 

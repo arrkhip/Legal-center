@@ -378,6 +378,10 @@ textarea:focus:-ms-input-placeholder {
 }
 
 @media (max-width: 540px) {
+  .promo {
+    padding: 0;
+  }
+
   .promo__slider-dots {
     right: 50%;
     -webkit-transform: translateX(50%);
@@ -391,6 +395,18 @@ textarea:focus:-ms-input-placeholder {
 
   .promo__info {
     text-align: center;
+  }
+
+  .promo__info-title {
+    font-size: 30px;
+    line-height: 1.2em;
+  }
+}
+
+@media (min-width: 992px) {
+  .promo__slide .grid {
+    max-width: 100%;
+    padding-left: 268px;
   }
 }
 
@@ -905,6 +921,7 @@ textarea:focus:-ms-input-placeholder {
   position: relative;
   width: calc(50% - 15px);
   height: 500px;
+  background: url("../img/map.png") no-repeat center/cover;
 }
 
 .contacts__map-btn {
@@ -1183,7 +1200,22 @@ textarea:focus:-ms-input-placeholder {
   }
 
   .footer__nav {
-    margin: 30px 0;
+    display: none;
+  }
+
+  .footer__social {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 540px) {
+  .footer {
+    padding: 50px 0;
+  }
+
+  .footer::before {
+    left: 0;
+    width: 100%;
   }
 }
 
@@ -1265,6 +1297,11 @@ textarea:focus:-ms-input-placeholder {
 
 .header__nav-item:not(:last-child) {
   margin-right: 20px;
+}
+
+.header__nav-item--active {
+  color: #c13e21;
+  border-bottom: 1px solid #c13e21;
 }
 
 .header__contacts {
